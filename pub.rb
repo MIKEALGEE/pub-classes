@@ -3,12 +3,9 @@ class Pub
 attr_accessor :name, :till, :stock
 
 def initialize(name, till, stock)
-
   @name = name
   @till = till
-  #@drinks = drinks
   @stock = stock
-
 end
 
 def get_cash(drink)
@@ -33,25 +30,5 @@ def refuse_customer(customer, drink)
     return "Sorry, get out"
   end
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 end

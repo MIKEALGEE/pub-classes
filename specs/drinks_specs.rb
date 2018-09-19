@@ -1,8 +1,8 @@
+require("minitest/rg")
+require("minitest/autorun")
 require_relative("../pub.rb")
 require_relative("../drinks.rb")
 require_relative("../customers.rb")
-require("minitest/rg")
-require("minitest/autorun")
 
 class DrinksTest < MiniTest::Test
 
@@ -21,19 +21,5 @@ class DrinksTest < MiniTest::Test
   def test_check_alcohol_level
     assert_equal(0.05, @drink.alcohol_level())
   end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 end

@@ -1,12 +1,11 @@
+require("minitest/rg")
+require("minitest/autorun")
 require_relative("../food.rb")
 require_relative("../pub.rb")
 require_relative("../drinks.rb")
 require_relative("../customers.rb")
-require("minitest/rg")
-require("minitest/autorun")
 
 class CustomersTest < MiniTest::Test
-
 
   def setup
     @customer1 = Customers.new("Mike", 50, 26, 0.00)
@@ -19,45 +18,34 @@ class CustomersTest < MiniTest::Test
   end
 
   def test_return_customer_name()
-    assert_equal("Mike",@customer1.name)
+    assert_equal("Mike", @customer1.name)
   end
 
   def test_return_customer_age()
-    assert_equal(26,@customer1.age)
+    assert_equal(26, @customer1.age)
   end
 
   def test_drunkenness()
-    assert_equal(0.00,@customer1.drunkenness())
+    assert_equal(0.00, @customer1.drunkenness())
   end
 
   def test_buy_drink()
-    assert_equal(45.4,@customer1.buy_drink(@drink4))
+    assert_equal(45.4, @customer1.buy_drink(@drink4))
   end
 
   def test_buy_food()
-    assert_equal(46.5,@customer1.buy_food(@food1))
+    assert_equal(46.5, @customer1.buy_food(@food1))
   end
 
   def test_update_drunkeness_level
     @customer1.takes_drink(@drink2)
-    assert_equal(0.04,@customer1.drunkenness())
+    assert_equal(0.04, @customer1.drunkenness())
   end
 
   def test_eat_food()
     @customer1.takes_drink(@drink4)
     @customer1.eat_food(@food1)
-    assert_equal(0.02,@customer1.drunkenness.round(2))
+    assert_equal(0.02, @customer1.drunkenness.round(2))
   end
-
-
-
-
-
-
-
-
-
-
-
 
 end
